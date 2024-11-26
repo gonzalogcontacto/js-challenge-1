@@ -25,8 +25,17 @@ Your mission is to create a function called  `getRecipe(recipeName)`  that does 
     -   Call the  `getRecipe()`  function with a recipe name (e.g., "Spaghetti Carbonara").
     -   Log the result to the console to verify that the complete  `recipe`  object is returned.
 
-
 4.  **bonus points:**
 	1. Add the receipt name in console when returning the entire instructions and ingredients 
 	2. Execute both API calls concurrently to make the function much more efficient
 	3. suscribe to the discord community 👉🏻 https://discord.gg/6YZGTxSFUX
+
+**Flow Diagram:**
+
+```mermaid
+graph LR
+A[getReceipt] --> B((getIngredients))
+A --> C(getInstructions)
+B --> D{receipt object}
+C --> D
+```
