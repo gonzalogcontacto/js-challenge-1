@@ -4,11 +4,12 @@ Asynchronous JavaScript: The Recipe Challenge
 
   
 
-Welcome to the first challenge of boothack community
+Welcome to the first challenge of boothack community 🥳 👋🏻 
 
   
 
-**The Goal:**
+**The Goal:** 🎯
+==============
 
   
 
@@ -34,7 +35,8 @@ Your mission is to create a function called `getRecipe(recipeName)` that does th
 
   
 
-**Flow Diagram:**
+**Flow Diagram:** 🔁
+==============
 
   
 
@@ -54,45 +56,47 @@ C --> D
 
   
 
-**Instructions:**
+**Instructions:** 📝
+==============
 
   
 
 1.  **Set up:**
 
-- Create function implementation of getRecipe function
+	- Create function implementation of getRecipe function
 
-- You'll be working with the provided `getIngredients()` and `getInstructions()` functions (see below). These functions are designed to simulate API calls and include a slight delay for demonstration purposes.
+	- You'll be working with the provided `getIngredients()` and `getInstructions()` functions (see below). These functions are designed to simulate API calls and include a slight delay for demonstration purposes.
 
 2.  **Implement the `getRecipe()` function:**
 
-- Use then/catch or async/await to execute both API calls.
+	- Use then/catch or async/await to execute both API calls.
 
-- Employ try...catch blocks to handle any errors that might occur during the API calls.
+	- Employ try...catch blocks to handle any errors that might occur during the API calls.
 
-- If an error happens in either API call, log the error message to the console and return `null` to indicate the recipe was not fetched successfully.
+	- If an error happens in either API call, log the error message to the console and return `null` to indicate the recipe was not fetched successfully.
 
-- If both API calls succeed, combine the `ingredients` and `instructions` into a `recipe` object and return it.
+	- If both API calls succeed, combine the `ingredients` and `instructions` into a `recipe` object and return it.
 
-3.  **Test Your Solution:**
+3.  **Test Your Solution:** 🧪
 
-- Call the `getRecipe()` function with a recipe name (e.g., "Spaghetti Carbonara").
+	- Call the `getRecipe()` function with a recipe name (e.g., "Spaghetti Carbonara").
 
-- Log the result to the console to verify that the complete `recipe` object is returned.
-
-  
-
-4.  **bonus points:**
-
-1. Add the receipt name in console when returning the entire instructions and ingredients
-
-2. Execute both API calls concurrently to make the function much more efficient
-
-3. suscribe to the discord community 👉🏻 https://discord.gg/6YZGTxSFUX
+	- Log the result to the console to verify that the complete `recipe` object is returned.
 
   
 
-**How to provide your challenge solution:**
+4.  **bonus points:** 🌟
+
+	- Add the receipt name in console when returning the entire instructions and ingredients
+
+	- Execute both API calls concurrently to make the function much more efficient
+
+	- Suscribe to the discord community 👉🏻 https://discord.gg/6YZGTxSFUX
+
+  
+
+**How to provide your challenge solution:** 📦
+==============
 
   
 
@@ -103,3 +107,14 @@ C --> D
 3. Upload your solution: Send your code as a PR to the GitHub repo via private message to Gonzalo (on discord) before December 2.
 
 4. (optional) Share your experience: Post your progress on social media using the hashtag #RetoCodigoBootHack so we can see you in action and mention @boothackTV.
+
+
+
+
+
+**What can you win?** 🎁
+==============
+
+As well as improving your skills and connecting with our amazing community, we have some great prizes up for grabs! 👇
+
+🥇 **Best Code Prize**: 1:1 Individual Coaching with @gonzalogcontacto (the boohtack founder)
