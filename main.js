@@ -1,6 +1,25 @@
-function getRecipe(recipeName){
-    // insert your code here
-    // return the recipe object with the instructions and ingredients
+function getRecipe(recipeName) {
+    return Promise.all([
+        getIngredients(recipeName),
+        getInstructions(recipeName)
+    ])
+    .then(([ingredients, instructions]) => {
+        const recipe = {
+            name: recipeName,
+            ingredients: ingredients,
+            instructions: instructions
+        };
+
+        console.log(`Recipe for ${recipeName}:`);
+        console.log("Ingredients:", ingredients);
+        console.log("Instructions:", instructions);
+
+        return recipe;
+    })
+    .catch(error => {
+        console.error(`Error fetching recipe for ${recipeName}:`, error); 
+        return null;
+    });
 }
 
 function getIngredients(recipeName){
@@ -27,6 +46,14 @@ function getInstructions(recipeName){
     })
 }
 
-// EXECUTE / TEST your getRecipe funcion
+// Prueba tu función con la receta "Spaghetti Carbonara"
+getRecipe("Spaghetti Carbonara").then(recipe => {
+    if (recipe) {
+        console.log("Complete recipe:", recipe);
+    } else {
+        console.log("Recipe could not be obtained");
+    }
+});
 
 
+  
