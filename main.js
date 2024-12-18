@@ -1,9 +1,35 @@
-function getRecipe(recipeName){
-    // insert your code here
-    // return the recipe object with the instructions and ingredients
+function getRecipe(recipeName) {
+    try {
+        console.log(`Fetching recipe for: ${recipeName}`);
+
+        // Ejecutar ambas llamadas a las APIs concurrentemente
+        return Promise.all([
+            getIngredients(recipeName),
+            getInstructions(recipeName)
+        ])
+        .then(([ingredients, instructions]) => {
+            const recipe = {
+                name: recipeName,
+                ingredients,
+                instructions
+            };
+
+            console.log("Recipe fetched successfully:", recipe);
+            return recipe;
+        })
+        .catch(error => {
+            console.error(`Error fetching recipe for ${recipeName}:`, error);
+            return null;
+        });
+
+    } catch (error) {
+        // Manejo de errores inesperados
+        console.error(`Unexpected error fetching recipe for ${recipeName}:`, error);
+        return null;
+    }
 }
 
-function getIngredients(recipeName){
+function getIngredients(recipeName) {
     return new Promise((resolve, reject) => {
        setTimeout(() => {
             if(recipeName === "Spaghetti Carbonara"){
@@ -12,10 +38,10 @@ function getIngredients(recipeName){
                 reject("recipe not found")
             }
        },1000)
-    })
+    });
 }
 
-function getInstructions(recipeName){
+function getInstructions(recipeName) {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
             if(recipeName === "Spaghetti Carbonara"){
@@ -24,9 +50,16 @@ function getInstructions(recipeName){
                 reject("recipe not found")
             }
         },1000)
-    })
+    });
 }
 
-// EXECUTE / TEST your getRecipe funcion
+// EXECUTE / TEST your getRecipe function
+getRecipe("Spaghetti Carbonara").then(result => {
+    if (result) {
+        console.log("Complete Recipe:", result);
+    } else {
+        console.log("Failed to fetch recipe.");
+    }
+});
 
 
